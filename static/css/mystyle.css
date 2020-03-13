@@ -2,7 +2,7 @@ h1{
   color: #f4c7e1;
 }
 span{
-  transition: all 1s ease;
+  transition: all 5s ease;
 }
 span.fade{
   color: black;
