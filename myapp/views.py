@@ -23,7 +23,7 @@ def index(request):
 
 
         comment= name + " with the email, " + email + ", sent the following message:\n\n" + message;
-        send_mail(subject, comment, 'bennyhinnotieno@gmail.com', [email])
+        send_mail(subject, comment, 'portfoliohinn@gmail.com', [email])
 
         return thanks(request)
 

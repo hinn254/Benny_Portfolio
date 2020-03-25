@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load crispy_forms_tags %}
 <html lang="en" dir="ltr">
   <head>
     <!-- Bootstrap CSS File -->
@@ -49,6 +50,15 @@
               <p class="card-text">Hi, my name is Benny Hinn and i'm a full stack web developer as well as a data scientist(Visualization and Analysis).
                 Being a python developer i have a lot to offer from building responsive websites, web scrapping, data Analysis and Visualisation, automation and problem solving with python.
                 I love Programming, doing Research and Collaborating. You can check my work below.</p>
+                <ul class="social-links">
+                  <li><img class="social"src="{% static "images/facebookicon.png" %}" alt=""> </li>
+                  <li><img class="social"src="{% static "images/githubicon.png" %}" alt=""> </li>
+                  <li><img class="social"src="{% static "images/instagramicon.jpg" %}" alt=""> </li>
+                  <li><img class="social"src="{% static "images/twitter.jpg" %}" alt=""> </li>
+                  <li><img class="social"src="{% static "images/Linkedin Icon.jpg" %}" alt=""> </li>
+
+
+                </ul>
             </div>
           </div>
         </div>
@@ -93,10 +103,10 @@
     <div class="row">
       <div class="col-md-6">
         <div class="card h-100">
-          <a href="https://chonjopoultryfarm.herokuapp.com"><img src="{% static "images/chonjo.png" %}" alt="" class="img-fluid card-image"></a>
+          <a href="https://imaratechcompany.herokuapp.com"><img src="{% static "images/imara.jpeg" %}" alt="" class="img-fluid card-image"></a>
           <div class="card-body">
             <h4 class="card-text">
-              <a href="https://chonjopoultryfarm.herokuapp.com"><p class="card-text">Chonjo Poultry Farm Landing Page</p></a>
+              <a href="https://imaratechcompany.herokuapp.com"><p class="card-text">Imara Tech Company Website</p></a>
             </h4>
           </div>
         </div>
@@ -130,13 +140,14 @@
 
   <h4 id="one"class="display-4 text-center">Let's Build Something Great Together!</h4>
   <form method="POST">
-    {{form.as_p}}
+    {{form|crispy}}
     {% csrf_token %}
   <input type="submit" class="btn btn-success" name="" value="Submit">
   </form>
 
 </div>
 </div>
+
 <!-- footer -->
   <footer>
     <div class="container-fluid padding">
